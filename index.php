@@ -340,7 +340,7 @@
                                                 <div class="number-rating">( 896 reviews )</div>
                                             </div>
                                             <p class="product-cate">Audio Speakers</p>
-                                            <h3 class="product-title"><a href="#">Harman Kardon Onyx Studio</a></h3>
+                                            <h3 class="product-title"><a href="#"></a></h3>
                                             <div class="product-bottom">
                                                 <div class="product-price"><span>$1,215.00</span></div>
                                                 <a href="#" class="btn-icon btn-view">
