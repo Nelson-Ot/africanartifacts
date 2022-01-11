@@ -27,8 +27,8 @@ if (strlen($_SESSION['id'] == 0)) {
     <?php
     function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $resizeHeight)
     {
-        $resizeWidth = 1920;
-        $resizeHeight = 900;
+        $resizeWidth = 721;
+        $resizeHeight = 466;
         $imageLayer = imagecreatetruecolor($resizeWidth, $resizeHeight);
         $background = imagecolorallocate($imageLayer, 0, 0, 0);
         // removing the black from the placeholder

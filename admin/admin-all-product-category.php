@@ -12,6 +12,7 @@ if (strlen($_SESSION['id'] == 0)) {
         $msg = mysqli_query($conn, "delete from product_category where cat_id='$adminid'");
         if ($msg) {
             echo "<script>alert('Data deleted');</script>";
+            echo "<script> window.location.href='admin-all-product-category.php';</script>";
         }
     }
 

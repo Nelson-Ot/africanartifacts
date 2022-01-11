@@ -14,9 +14,10 @@ if (strlen($_SESSION['id'] == 0)) {
     /// for deleting user
     if (isset($_GET['delete'])) {
         $adminid = $_GET['delete'];
-        $msg = mysqli_query($conn, "delete from products where id='$adminid'");
+        $msg = mysqli_query($conn, "delete from slider where id='$adminid'");
         if ($msg) {
             echo "<script>alert('Data deleted');</script>";
+            echo "<script>window.location.href='admin-slider-all.php'</script>";
         }
     }
 
@@ -55,10 +56,6 @@ if (strlen($_SESSION['id'] == 0)) {
 
 
                                 while ($row = mysqli_fetch_array($slider)) {
-
-
-
-
                                 ?>
                                 <tr>
                                     <td><?php echo $cnt ?></td>
@@ -67,7 +64,7 @@ if (strlen($_SESSION['id'] == 0)) {
                                     </td>
                                     
                                     <td><a href="admin-slider-edit.html?row=10" class="db-list-edit">Edit</a></td>
-                                    <td><a href="admin-slider-delete.html?row=10" class="db-list-edit">Delete</a></td>
+                                    <td><a href="admin-slider-all.php?delete=<?php echo $row['id'];?>" class="db-list-edit">Delete</a></td>
                                 </tr>
                                <?php $cnt = $cnt + 1; } ?>
 
