@@ -44,7 +44,7 @@
                                 </div>
                                 <ul class="footer-block-content">
                                     <li class="address">
-                                        <span>45 Grand Central Terminal New York,NY 1017 United State USA</span>
+                                        <span> Ngara, Naorobi Kenya</span>
                                     </li>
                                     <li class="phone">
                                         <span>(+123) 456 789 - (+123) 666 888</span>
@@ -69,14 +69,20 @@
                             <div class="footer-block">
                                 <h3 class="footer-block-title">Quick menu</h3>
                                 <ul class="footer-block-content">
-                                    <li><a href="#">TV & Video</a></li>
-                                    <li><a href="#">Home Audio & Theater</a></li>
-                                    <li><a href="#">Camera, Photo & Video</a></li>
-                                    <li><a href="#">Cell Phones & Accessories</a></li>
-                                    <li><a href="#">Headphones</a></li>
-                                    <li><a href="#">Video Games</a></li>
-                                    <li><a href="#">Bluetooth & Wireless Speakers</a></li>
-                                    <li><a href="#">Car Electronics</a></li>
+                                <?php
+                                $cat = mysqli_query($conn, "select * from product_category");
+                                $cnt = 1;
+
+
+                                while ($row = mysqli_fetch_array($cat)) {
+
+
+
+
+                                ?>
+                                    <li><a href="#"><?php echo $row['cat_name'];?></a></li>
+                                    <?php } ?>
+                                    
                                 </ul>
                             </div>
                         </div>
